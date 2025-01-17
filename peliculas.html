@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Usurbil</title>
+    <link rel="icon" href="multimedia/logo.png">
+    <!--Aqui va el css-->
+    <style>
+        div {
+            width: 30%;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .img {
+            transition-duration: 0.4s;
+            max-height: 530px;
+            width: auto;
+            height: fit-content;
+        }
+
+        .img1:hover {
+            max-height: 560px;
+            width: auto;
+            height: fit-content;
+        }
+
+        #licencia {
+            width: 100%;
+            height: auto;
+        }
+
+        ul {
+            background-color: hsl(0, 0%, 15%);
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+
+        }
+
+        li {
+            float: left;
+        }
+
+        li a,
+        .dropbtn {
+            display: inline-block;
+            padding: 14px;
+            transition-duration: 0.4s;
+            color: white;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active),
+        .dropdown:hover .dropbtn {
+            background-color: black;
+            color: white
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: dimgray;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .active {
+            background-color: #e3e000;
+        }
+
+        @media only screen and (max-width: 800px) {
+            div {
+                width: 100%;
+            }
+
+            .img {
+                width: auto;
+                height: fit-content;
+                max-width: 250px;
+            }
+
+            .img1:hover {
+                width: auto;
+                height: fit-content;
+                max-width: 290px;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="background-color:rgb(30, 30, 75);font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;font-size:18px">
+    <header><a style="color: white;" href="index.html"> <img class="logo" src="multimedia/logo3.png"
+                alt="Logotipo cine usurbil"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Cine Usurbil</a></li>
+                <li><a class="active" href="peliculas.html">Peliculas</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Géneros</a>
+                    <div class="dropdown-content">
+                        <a href="terror.html">Terror</a>
+                        <a href="accion.html">Acción</a>
+                        <a href="ciencia_ficcion.html">Ciencia ficción</a>
+                        <a href="drama.html">Drama</a>
+                        <a href="comedia.html">Comedia</a>
+                    </div>
+                </li>
+                <li><a href="votaciones.html">Votaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="width:100%">
+        <h1>PELICULAS</h1>
+        <!--Las peliculas que se van a mostrar en divs horizontales-->
+        <div style="padding: 20px;"><a style="color:white" href="bitelchus.html"><img class="img img1"
+                    src="multimedia/bitelchus.jpg" alt="Bitelchús Bitelchús con Michael Keaton"
+                    title="Bitelchús Bitelchús">
+                <p style="text-align: center;">Bitelchús Bitelchús</p>
+            </a>
+        </div>
+        <div style="padding: 20px;text-align:center"><a style="color: white;" href="joker.html"><img class="img img1"
+                    src="multimedia/joker.png" alt="Joker Folie à Deux de Todd Philips" title="Joker 2">
+                <p style="text-align: center;">Joker: Folie à Deux</p>
+            </a>
+        </div>
+        <div style="padding:20px"><a style="color: white;" href="transformers.html"><img class="img img1"
+                    src="multimedia/transformers.png" alt="Transformers One, descubre el origen"
+                    title="Transformers One">
+                <p style="text-align: center;">Transformers One</p>
+            </a>
+        </div>
+        <div style="padding:20px"><a style="color: white;" href="scream.html"><img class="img img1"
+                    src="multimedia/scream.jpg" alt="Scream 2022" title="Scream">
+                <p style="text-align: center;">Scream</p>
+            </a>
+        </div>
+        <div style="padding:20px"><a style="color: white;" href="starwars.html"><img class="img img1"
+                    src="multimedia/starwars.jpg" alt="Star Wars III: La venganza de los Sith" title="Star Wars III">
+                <p style="text-align: center;">Star Wars III</p>
+            </a>
+        </div>
+        <div style="padding:20px"><a style="color: white;" href="forrest.html"><img class="img img1"
+                    src="multimedia/forrest.jpg" alt="Forrest Gump de Tom Hanks" title="Forrest Gump">
+                <p style="text-align: center;">Forrest Gump</p>
+            </a>
+        </div>
+    </div>
+    <!--Etiqueta de licencia-->
+    <div style="background-color:hsla(0, 0%, 15%, 0.8);width:100%;padding:0">
+        <footer style="bottom: 0;position:relative;">
+
+            <div style="width: 30%;text-align:left;padding-left:25px;">
+                <h3>Sobre nosotros</h3>
+                <address>Etarte Bidea, 20160 Zubieta, Gipuzkoa</address>
+                <p>Contacto: 111222333<br><a style="color: white;"
+                        href="mailto:cineusurbil@gmail.com">cineusurbil@gmail.com</a></p>
+            </div>
+
+            <div style="text-align:justify;width:30%;padding-left:25px">
+                <h3>Historia</h3>
+                <p>Nosotros somos un cine para la gente de siempre y desde siempre</p>
+            </div>
+            <div style="width: 30%;padding-left:25px">
+                <h3>Redes sociales</h3><br>
+                <img src="multimedia/instagram.png" alt="Instagram cine usurbil"><br>
+                <img src="multimedia/twitter.png" alt="Twitter cine usurbil"><br>
+                <img src="multimedia/facebook.png" alt="Facebook cine usurbil">
+            </div>
+            <hr>
+            <div style="width: 7%;text-align:left"><img id="licencia" src="multimedia/licencia.png" alt="licencia">
+            </div>
+            <div style="width: 92%;text-align:left">
+                <p style="font-size: small;color:gray;text-align:left">Cine Usurbil © 2024 by Usurbilgo lanbide eskola
+                    está licenciado por
+                    <a style="color: gray;"
+                        href="https://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1">CCBY-ND 4.0</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
