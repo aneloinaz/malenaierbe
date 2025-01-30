@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chistes de Chuck Norris</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color:blueviolet;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e55a00;
+        }
+        #chiste{
+            margin-top: 20px;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+    </style>
+     <script>
+        // Función para obtener un chiste desde la API de Chuck Norris
+        async function obtenerChiste() {
+            try {
+                const response = await fetch('https://api.chucknorris.io/jokes/random');
+                const chiste = await response.json(); // Obtener los datos de la API
+                document.getElementById('chiste').innerText= chiste.value; // El chiste está en la propiedad 'value'
+            } catch (error) {
+                console.error("Error al obtener el chiste:", error);
+                return "¡Error al cargar el chiste! Intenta de nuevo.";
+            }
+        }
+    
+    </script>
+</head>
+<body>
+
+    <div class="container">   
+        <button onclick="obtenerChiste()">Contar chiste</button>
+        <div id="chiste"></div>
+    </div>
+
+   
+
+</body>
+</html>
