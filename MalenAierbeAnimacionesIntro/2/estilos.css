@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.transicion{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: width 4s; /*transizio honekin, itzultzeko 4 seg*/
+} .transicion:hover{
+    width: 200px;
+    height: 200px;
+    transition: width 4s;
+}
