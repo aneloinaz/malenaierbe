@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilos.css">
+        <title>Formularioaren ariketa</title>
+    </head>
+    <body>
+        <header>
+        </header>
+        
+        <main>
+            <h1>Preparación de evento ...</h1>
+            <p>Cuentanos cómo...</p>
+
+            <form action="resultado.html"> <!--ezer ez badugu jartzen, method get jartzea bezala izango da-->
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                    <br>
+                    <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha-nacimiento">
+                    <br>
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" value="#ff0000">
+                    <br>
+                    <label for="describete">Cuentanos ...</label>
+                    <br>
+                    <textarea id="describete" rows="6" cols="50"></textarea>
+                    <br>
+                    <label for="tipo-equipo">Tipo de equipo...</label>
+                    <br>
+                    <input type="checkbox" id="pc-escritorio">
+                    <label for="pc-escritorio">PC de escritorio</label>   
+                    <input type="text" id="pc-escritorio-texto">
+                    <br>
+                    <input type="checkbox" id="port">
+                    <label for="portatil">Portatil</label>   
+                    <input type="text" id="portatil-texto">
+                </fieldset>
+                <fieldset>
+                    <legend>Detalles del Evento</legend>
+                    <label for="num-asistentes">Numero de...</label>
+                    <input type="number" id="num-asistentes">
+                    <br>
+                    <label for="tematica">Tematica ...</label>
+                    <select id="tematica">
+                        <option value="desarrollo">Desarrollo de software</option>
+                        <option value="inteligencia">Inteligencia Artificial</option>
+                        <option value="cyberseguridad">Cyberseguridad</option>
+                        <option value="redes">Redes</option>                    
+                    </select>
+                    <label for="agregar-tematica">Añadir tematica</label>
+                    <input type="text" id="agregar-tematica">
+                    <input type="button" onclick="agregarTematica()" value="Añdir tematica">
+                    <!-- <button onclick="agregarTematica()">Añadir temática</button> -->
+                    <br>
+                    <label for="fecha-hora">Fecha y...</label>
+                    <br>
+                    <input type="datetime-local" id="fecha-hora">
+                </fieldset>
+                <button type="reset">Borrar datos</button>
+                <button type="submit">ENVIAR</button>
+                <!--
+                <input type="reset" value="Borrar datos">
+                <input type="submit" value="ENVIAR">
+                -->
+            </form>
+        </main>
+
+        <footer>
+            <script src="javascript.js"></script>
+        </footer>
+    </body>
+</html>
