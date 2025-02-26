@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="estilo.css">
+        <script src="funciones.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <main class="container">
+            <header class="container">
+                <h1 class="display-1">Tu evento de informática está en marcha</h1>
+                <br>
+                <p class="lead">Felicidades <b id="nombre"></b>, ya estamos organizando tu evento de informática.</p>
+                <p class="lead">Tus <b id="asistentes"></b> asistentes disfrutarán del evento sobre <b id="tematica"></b>.</p>
+                <p class="lead">Nos pondremos en contacto contigo mediante <b id="email"></b> para más detalles.</p>
+                <p class="lead">¡Prepárate para disfrutar de este gran evento de tecnología!</p>
+                <p class="lead">¡Vas a celebrar tus <b id="edad"></b> años de conocimiento tecnológico!</p>
+            </header>
+        </main>
+
+        <script>
+            //Se coge la información de la URL
+            locationInfo = window.location.href.split("?");
+
+            //Se descarta la primera parte de la URL y se coge la segunda
+            datos = locationInfo[1];
+
+            //se separan los datos
+            const arrayDatos = datos.split('&');
+
+            //Creamos un objeto para guardar los datos
+            const obj = {};
+
+            //Recorremos el array de datos y los guardamos en el objeto
+            for(let i=0; i< arrayDatos.length; i++){
+                //Separamos el nombre del valor
+                let informacion = arrayDatos[i].split('=');
+
+                //Asignamos a un parámetro del objeto el valor
+                obj[informacion[0]] = informacion[1];
+            }
+
+            //Se rellenan los campos con la información del objeto
+            document.getElementById('nombre').innerHTML = decodeURIComponent(obj.nombre);
+            document.getElementById('asistentes').innerHTML = obj.asistentes;
+            document.getElementById('tematica').innerHTML = decodeURIComponent(obj.tematica);
+            document.getElementById('email').innerHTML = decodeURIComponent(obj.email);
+
+            //Se calcula la edad
+            let edad = calcularEdad(obj.fecha);
+            document.getElementById('edad').innerHTML = edad + 1;
+        </script>
+    </body>
+</html>
